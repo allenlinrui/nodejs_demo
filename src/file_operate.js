@@ -12,7 +12,8 @@ fs.writeFile('../test/message.txt', txt, function (err) {
 }); 
 
 //读取文件
+//读取文件编码一定要写，不然会读出原生buffer
 fs.readFile('../test/message.txt', 'utf8', function (err, data) {
 	if (err) throw err;
 	console.log(data);
-});
+}); 
